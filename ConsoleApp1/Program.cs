@@ -75,25 +75,24 @@ else
 
 // Questão 7
 static float CalcularMedia(float nota1, float nota2, float nota3)
-    {
-       
-        float media = (nota1 + nota2 + nota3) / 3;
-        return media;
-    }
- static void Main()
-    {
-     
-        float nota1 = 7.5f;
-        float nota2 = 8.0f;
-        float nota3 = 9.0f;
+{
+    float media = (nota1 + nota2 + nota3) / 3;
+    return media;
+}
 
-      
-        float media = CalcularMedia(nota1, nota2, nota3);
+static void Main()
+{
+    Console.WriteLine("Digite as três notas separadas por espaço:");
 
-        Console.WriteLine("A média das notas é: " + media);
+    string[] entrada = Console.ReadLine().Split(' ');
+    float nota1 = float.Parse(entrada[0]);
+    float nota2 = float.Parse(entrada[1]);
+    float nota3 = float.Parse(entrada[2]);
 
-    }
+    float media = CalcularMedia(nota1, nota2, nota3);
 
+    Console.WriteLine("A média das notas é: " + media);
+}
 //Questão 8
 Console.WriteLine("Escreva 3 números.");
 string[] entrada = Console.ReadLine().Split(' ');
